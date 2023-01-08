@@ -4,8 +4,13 @@
 	"description": "\"Beyond the Passive Christian\" is a blog website that aims to inspire and challenge readers to live a more active and intentional faith. The website features articles and resources on topics such as spiritual growth, social justice, and living out one's faith in the modern world.",
 	"main": "index.js",
 	"scripts": {
-		"start": "eleventy --serve",
-		"build": "eleventy"
+		"watch:sass": "sass --watch src/sass:public/css",
+		"watch:eleventy": "eleventy --serve",
+		"build:sass": "sass --no-source-map src/sass:public/css",
+		"build:eleventy": "eleventy",
+		"postbuild": "lightningcss --minify --targets '> 0.25%, not IE 11' public/css/*.css -o public/css/*.css",
+		"start": "npm-run-all build:sass --parallel watch:*",
+		"build": "npm-run-all build:sass build:eleventy"
 	},
 	"repository": {
 		"type": "git",
@@ -19,6 +24,13 @@
 	},
 	"homepage": "https://github.com/osaroadade/beyond-passivity#readme",
 	"devDependencies": {
-		"@11ty/eleventy": "^1.0.2"
-	}
+		"@11ty/eleventy": "^1.0.2",
+		"lightningcss-cli": "^1.18.0",
+		"npm-run-all": "^4.1.5",
+		"sass": "^1.57.1"
+	},
+	"browserslist": [
+		"> 0.25%",
+		"not IE 11"
+	]
 }
