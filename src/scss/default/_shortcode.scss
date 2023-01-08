@@ -48,7 +48,7 @@ font-family: 'Red Hat Display', sans-serif;
 
 @for $i from 1 through 4 {
     .bg_image--#{$i} {
-        background-image: url(../../assets/bg/bg-image-#{$i}.jpg);
+        background-image: url(../..//assets/bg/bg-image-#{$i}.jpg);
     }
 }
 

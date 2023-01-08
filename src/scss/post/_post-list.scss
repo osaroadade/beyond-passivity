@@ -5,6 +5,10 @@ Post List Style
     margin: 0 -15px;
 }
 
+.jc-center {
+    justify-content: center;
+}
+
 .slick-single-layout {
     padding: 0 15px;
 }
@@ -261,7 +265,7 @@ Post List Style
 
             &::before {
                 content: '';
-                background: url('../../assets/icons/shape-01.png');
+                background: url('../..//assets/icons/shape-01.png');
                 height: 77px;
                 width: 100%;
                 position: absolute;

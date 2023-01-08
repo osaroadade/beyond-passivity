@@ -29745,7 +29745,7 @@ fieldset:disabled .btn {
 
 /* Slider */
 .slick-loading .slick-list {
-    background: #fff url('../../assets/ajax-loader.gif') center center no-repeat;
+    background: #fff url('../..//assets/ajax-loader.gif') center center no-repeat;
 }
 
 /* Icons */
