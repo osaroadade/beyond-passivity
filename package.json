@@ -1,0 +1,24 @@
+{
+	"name": "beyond-passivity",
+	"version": "1.0.0",
+	"description": "\"Beyond the Passive Christian\" is a blog website that aims to inspire and challenge readers to live a more active and intentional faith. The website features articles and resources on topics such as spiritual growth, social justice, and living out one's faith in the modern world.",
+	"main": "index.js",
+	"scripts": {
+		"start": "eleventy --serve",
+		"build": "eleventy"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/osaroadade/beyond-passivity.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/osaroadade/beyond-passivity/issues"
+	},
+	"homepage": "https://github.com/osaroadade/beyond-passivity#readme",
+	"devDependencies": {
+		"@11ty/eleventy": "^1.0.2"
+	}
+}
