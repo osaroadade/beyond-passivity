@@ -4,9 +4,9 @@
 	"description": "\"Beyond the Passive Christian\" is a blog website that aims to inspire and challenge readers to live a more active and intentional faith. The website features articles and resources on topics such as spiritual growth, social justice, and living out one's faith in the modern world.",
 	"main": "index.js",
 	"scripts": {
-		"watch:sass": "sass --watch src/sass:public/css",
+		"watch:sass": "sass --no-source-map --watch src/scss:public/css",
 		"watch:eleventy": "eleventy --serve",
-		"build:sass": "sass --no-source-map src/sass:public/css",
+		"build:sass": "sass --no-source-map src/scss:public/css",
 		"build:eleventy": "eleventy",
 		"postbuild": "lightningcss --minify --targets '> 0.25%, not IE 11' public/css/*.css -o public/css/*.css",
 		"start": "npm-run-all build:sass --parallel watch:*",
