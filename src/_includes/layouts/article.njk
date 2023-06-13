@@ -1,0 +1,103 @@
+{% extends "layouts/base.njk" %}
+{% set recommendedPosts = helpers.getSiblingContent(collections.blog, page) %}
+
+{% block content %}    
+    <!-- Start Post Single Wrapper  -->
+    <div class="post-single-wrapper axil-section-gap bg-color-white">
+        <div class="container">
+            <div class="row">
+                <div
+                    class="col-lg-8 offset-lg-2">
+                    <!-- Start Banner Area -->
+                    <div class="banner banner-single-post post-formate post-layout pb--40">
+                        <div class="container">
+                            <div class="row">
+                                <div
+                                    class="col-lg-12">
+                                    <!-- Start Single Slide  -->
+                                    <div
+                                        class="content-block">
+                                        <!-- Start Post Content  -->
+                                        <div class="post-content">
+                                            {% if featured %}
+                                                <div class="post-cat">
+                                                    <div class="post-cat-list">
+                                                        <a class="hover-flip-item-wrapper">
+                                                            <span class="hover-flip-item">
+                                                                <span data-text="FEATURED">FEATURED</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            <h1 class="title">{{ title }}</h1>
+                                            <!-- Post Meta  -->
+                                            <div class="post-meta-wrapper">
+                                                <div class="post-meta">
+                                                    <div class="content">
+                                                        <h6 class="post-author-name">
+                                                            <a class="hover-flip-item-wrapper" href="author.html">
+                                                                <span class="hover-flip-item">
+                                                                    <span data-text="{{ author }}">{{ author }}</span>
+                                                                </span>
+                                                            </a>
+                                                        </h6>
+                                                        <ul class="post-meta-list">
+                                                            <li>{{ date | postDate }}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <ul class="social-share-transparent justify-content-end">
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-facebook-f"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-instagram"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-twitter"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fas fa-link"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- End Post Content  -->
+                                    </div>
+                                    <!-- End Single Slide  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Banner Area -->
+                    <!-- Start Blog Details  -->
+                    <div class="axil-post-details">
+
+                        {{ content | safe }}
+                        {% if tags %}
+                            <div class="tagcloud">
+                                {% for tag in tags %}
+                                    <a href="/tag/{{ tag | slug }}/">{{ tag | title }}</a>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <!-- End Blog Details  -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Post Single Wrapper  -->
+    {% if recommendedPosts %}
+        {% include "partials/recommended-articles.njk" %}
+    {% endif %}
+{% endblock %}

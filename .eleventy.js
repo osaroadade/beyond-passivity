@@ -9,9 +9,17 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("postDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
     })
-    eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+    eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`)
+
+    eleventyConfig.addCollection("blog", collection => {
+        return [...collection.getFilteredByGlob('./src/articles/*.md')].reverse()
+    })
 
     return {
+        markdownTemplateEngine: 'njk',
+        dataTemplateEngine: 'njk',
+        htmlTemplateEngine: 'njk',
+
         dir: {
             input: "src",
             output: "public",

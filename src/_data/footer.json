@@ -1,0 +1,38 @@
+{
+    "links": [
+        {
+            "label": "Articles",
+            "url": "/articles/"
+        },
+        {
+            "label": "About",
+            "url": "/about/"
+        },
+        {
+            "label": "Contact Us",
+            "url": "#"
+        },
+        {
+            "label": "Terms of Use",
+            "url": "#"
+        }
+    ],
+    "socials": [
+        {
+            "url": "#",
+            "faTag": "facebook-f"
+        },
+        {
+            "url": "#",
+            "faTag": "instagram"
+        },
+        {
+            "url": "#",
+            "faTag": "twitter"
+        },
+        {
+            "url": "#",
+            "faTag": "youtube"
+        }
+    ]
+}

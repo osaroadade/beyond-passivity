@@ -8,18 +8,22 @@ Navigation Css
             display: flex;
             margin: 0;
             padding: 0;
-            justify-content: center;
+            justify-content: flex-end;
             flex-wrap: wrap;
-            > li {
+
+            >li {
                 margin: 0 18px;
                 position: relative;
+
                 @media #{$laptop-device} {
                     margin: 0 12px;
                 }
+
                 @media #{$lg-layout} {
                     margin: 0 12px;
                 }
-                > a {
+
+                >a {
                     font-size: var(--font-size-b2);
                     line-height: var(--line-height-b2);
                     color: var(--color-midgray);
@@ -29,6 +33,7 @@ Navigation Css
                     display: block;
                     line-height: 80px;
                     position: relative;
+
                     &::after {
                         position: absolute;
                         bottom: 0;
@@ -40,13 +45,14 @@ Navigation Css
                         left: 0;
                         border-radius: 10px 10px 0 0;
                     }
-                    
+
                     &:hover {
                         @extend %color-primary;
                     }
                 }
+
                 &:hover {
-                    > a {
+                    >a {
                         &::after {
                             width: 100%;
                         }
@@ -68,6 +74,7 @@ Navigation Css
                         border-radius: 0 0 10px 10px;
                         box-shadow: var(--shadow-primary);
                         @extend %transition;
+
                         li {
                             a {
                                 font-size: var(--font-size-b2);
@@ -81,20 +88,22 @@ Navigation Css
                                         &::before {
                                             color: var(--color-midgray);
                                         }
-                                        
+
                                         &::after {
                                             color: var(--color-primary);
                                         }
                                     }
                                 }
                             }
+
                             &:hover {
-                                > a {
+                                >a {
                                     color: var(--color-primary);
                                 }
                             }
                         }
                     }
+
                     &:hover {
                         .axil-submenu {
                             opacity: 1;
@@ -107,6 +116,7 @@ Navigation Css
                 // Mega Menu 
                 &.megamenu-wrapper {
                     position: static;
+
                     .megamenu-sub-menu {
                         @extend %liststyle;
                         box-sizing: border-box;
@@ -134,27 +144,33 @@ Navigation Css
                                 border-right: 1px solid #CED0D4;
                                 padding: 30px;
                                 @extend %liststyle;
+
                                 .vertical-nav-item {
                                     margin: 10px 0;
+
                                     a {
                                         color: var(--color-midgray);
                                         font-size: 16px;
                                         line-break: 20px;
                                         display: block;
+
                                         &.hover-flip-item-wrapper {
                                             span {
                                                 &::before {
                                                     color: var(--color-midgray);
                                                 }
+
                                                 &::after {
                                                     color: var(--color-primary);
                                                 }
                                             }
                                         }
                                     }
+
                                     &.active {
                                         a {
                                             color: var(--color-primary);
+
                                             &.hover-flip-item-wrapper {
                                                 span {
                                                     &::before {
@@ -164,9 +180,11 @@ Navigation Css
                                             }
                                         }
                                     }
+
                                     &:first-child {
                                         margin-top: 0;
                                     }
+
                                     &:last-child {
                                         margin-bottom: 0;
                                     }

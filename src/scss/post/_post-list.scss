@@ -1031,7 +1031,7 @@ Post Category
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            margin: -8px;
+            gap: 6px;
 
             a {
                 @extend %color-secondary;
@@ -1039,13 +1039,16 @@ Post Category
                 display: flex;
                 font-size: var(--font-size-b3);
                 line-height: 20px;
-                margin: 8px;
                 position: relative;
                 font-weight: var(--p-medium);
                 @extend %transition;
 
                 &.hover-flip-item-wrapper {
                     span {
+                        &.hover-flip-item {
+                            padding-right: 5px;
+                        }
+
                         &::after {
                             color: var(--color-primary);
                         }

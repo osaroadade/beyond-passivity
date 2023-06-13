@@ -1,10 +1,11 @@
 ---
-title: Articles Detail Page
+title: A new article
 author: Osaro Adade
 date: 2023-01-08
-tag: post
+tags: post
+featured: true
 image: /assets/post-single/post-single-06.jpg
-imageAlt: This unage is really cool,ain't it?
+imageAlt: This image is really cool,ain't it?
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis enim quisquam adipisci labore laudantium, sapiente aliquid accusantium dignissimos, eligendi tempore recusandae et, illo veniam vitae quas quos pariatur sequi odit.
 ---
 

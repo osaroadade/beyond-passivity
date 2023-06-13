@@ -1,0 +1,19 @@
+{% extends "layouts/base.njk" %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = content %}
+{% set postListItems = pagination.items %}
+
+{% if tag %}
+    {% set postListItems = collections[tag] %}
+    {% set pageHeaderTitle = tag %}
+{% endif %}
+
+{% block content %}
+    {% if tag %}
+        {% include "partials/page-header.njk" %}
+    {% endif %}
+    
+    {% include "partials/post-list.njk" %}
+
+{% endblock %}

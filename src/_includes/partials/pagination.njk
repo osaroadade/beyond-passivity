@@ -1,0 +1,25 @@
+{# Only renders this section if thre are links to render #}
+{% if pagination.href.next or pagination.href.previous %}
+    <!-- Start Pagination  -->
+    <div class="mt--80">
+        <nav class="pagination__inner" aria-label="Pagination links">
+            <ul class="social-icon md-size justify-content-center">
+                {% if pagination.href.previous %}
+                    <li>
+                        <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </li>
+                {% endif %}
+                {% if pagination.href.next %}
+                    <li>
+                        <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+    <!-- End Pagination  -->
+{% endif %}
